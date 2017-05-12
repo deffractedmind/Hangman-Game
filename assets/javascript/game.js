@@ -80,7 +80,7 @@
         console.log(guessesAllowed);
 
         // console.log(gameWordPick);
-        console.log(gameWord);
+        // console.log(gameWord);
         var gameWordString = gameWord.toString();
         var gameWordClean = gameWordString.replace(/,/g, "");
 
