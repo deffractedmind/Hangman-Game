@@ -123,7 +123,7 @@
                         } else if (guessesAllowed === 0) {
                             loses = loses + 1;
                             document.getElementById("loses").innerHTML = loses;
-                            alert("Your word was: " , gameWordClean);
+                            alert("You almost had it, try again. Your word was: " + gameWordClean);
                             firstTime = 0;
                             hangMan();
                         } else {
