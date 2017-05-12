@@ -1,6 +1,6 @@
     var wins = 0;
     var loses = 0;
-    var firstTime = 1;
+    // var firstTime = 1;
 
     var sndMiss = new Audio("assets/audio/Miss2.wav");
     var sndHit = new Audio("assets/audio/Hit.wav");
@@ -19,11 +19,11 @@
 
     function hangMan() {
 
-        if (firstTime === 1) {
-            document.getElementById("firsttime").innerHTML = "Turn Volume Up";
-        } else {
-            document.getElementById("firsttime").innerHTML = null;
-        }
+        // if (firstTime === 1) {
+        //     document.getElementById("firsttime").innerHTML = "Turn Volume Up";
+        // } else {
+        //     document.getElementById("firsttime").innerHTML = null;
+        // }
         var guessWord = [];
         var gameWord = [];
         var guessesAllowed = 0;
@@ -68,7 +68,7 @@
         document.getElementById("guessword").innerHTML = guessWordClean;
         document.getElementById("misses").innerHTML = null;
 
-        var play = confirm("Click cancel for Easy Play, OK for Normal Play.");
+        var play = confirm("This game has audio so turn your volume up. Click cancel for Easy Play, OK for Normal Play.");
 
         if (play == true) {
             guessesAllowed = letters.length + 4; //-- dynamic +4 guesses allowed for normal play
@@ -80,7 +80,7 @@
         console.log(guessesAllowed);
 
         // console.log(gameWordPick);
-        // console.log(gameWord);
+        console.log(gameWord);
         var gameWordString = gameWord.toString();
         var gameWordClean = gameWordString.replace(/,/g, "");
 
@@ -126,7 +126,7 @@
                             loses = loses + 1;
                             document.getElementById("loses").innerHTML = loses;
                             alert("You almost had it, try again. Your word was: " + gameWordClean);
-                            firstTime = 0;
+                            // firstTime = 0;
                             hangMan();
                         } else {
                             console.log("you already used \'", keyPress, "\'.")
@@ -136,7 +136,7 @@
                     alert('That was \"' + event.key + '\". Please click a letter instead.');
                 }
                 if (guessWord.indexOf('_') === -1 && guessesAllowed >= 0) {
-                    firstTime = 0;
+                    // firstTime = 0;
                     alert("Congratulations! You escaped hanging. Your word was: " + gameWordClean);
                     wins = wins + 1;
                     document.getElementById("wins").innerHTML = wins;
