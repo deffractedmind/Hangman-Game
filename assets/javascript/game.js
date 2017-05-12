@@ -135,7 +135,7 @@
                 }
                 if (guessWord.indexOf('_') === -1 && guessesAllowed >= 0) {
                     firstTime = 0;
-                    alert("Congratulations! You escaped hanging.");
+                    alert("Congratulations! You escaped hanging. Your word was: " + gameWordClean);
                     wins = wins + 1;
                     document.getElementById("wins").innerHTML = wins;
                     hangMan();
