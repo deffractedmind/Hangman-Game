@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://bootswatch.com/slate/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Ewert|Smokum" rel="stylesheet">
+		<script type="text/javascript" src="assets/javascript/game.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header>Hang 'Em High Hangman</header>
+		<div id="firsttime"></div>
+		<div class="yourword">
+			<span id="word"></span>
+		</div>
+		<div class="main">
+			Wins: <span id="wins"></span>
+		</div>
+		<div class="main">
+			Loses: <span id="loses"></span>
+		</div>
+		<div class="main">
+		<button onclick="newGame()">New Game</button>
+		</div>
+		<div id="guessword">
+		</div>
+		<div class="main">
+			Remaining Guesses: <span id="guesses"></span>
+		</div>
+		<div class="miss">
+			<span id="misses"></span>
+		</div>
+		<div class="main">
+			Missed Shots:
+		</div>
+	</div>
+</body>
+</html>
