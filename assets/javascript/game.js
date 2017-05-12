@@ -80,7 +80,7 @@
         console.log(guessesAllowed);
 
         // console.log(gameWordPick);
-        console.log(gameWord);
+        // console.log(gameWord);
         var gameWordString = gameWord.toString();
         var gameWordClean = gameWordString.replace(/,/g, "");
 
@@ -121,10 +121,9 @@
 
 
                         } else if (guessesAllowed === 0) {
-                            document.getElementById("word").innerHTML = gameWordClean;
                             loses = loses + 1;
                             document.getElementById("loses").innerHTML = loses;
-
+                            alert("Your word was: " , gameWordClean);
                             firstTime = 0;
                             hangMan();
                         } else {
