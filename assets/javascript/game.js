@@ -79,7 +79,6 @@
         console.log('calculated guesses: ', letters.length);
         console.log(guessesAllowed);
 
-        // console.log(gameWordPick);
         // console.log(gameWord);
         var gameWordString = gameWord.toString();
         var gameWordClean = gameWordString.replace(/,/g, "");
