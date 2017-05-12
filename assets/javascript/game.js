@@ -98,6 +98,7 @@
                     if (gameWord.indexOf(keyPress) > -1 && guessWord.indexOf("_") > -1) {
                         sndHit.play();
                         var idx = gameWord.indexOf(keyPress);
+                        guessesAllowed = guessesAllowed - 1;
                         // console.log(idx , "before while");
                         while (idx != -1) { //do while to catch double letter
                             guessWord.splice(idx, 1, keyPress);
@@ -107,6 +108,7 @@
                         var guessWordString = guessWord.toString(); //guessWord.join();
                         var guessWordClean = guessWordString.replace(/,/g, " ");
                         document.getElementById("guessword").innerHTML = guessWordClean;
+                        document.getElementById("guesses").innerHTML = guessesAllowed;
                     } else {
                         //-- this builds the array for letters used that are misses
                         if (guessLetter.indexOf(keyPress) === -1 && gameWord.indexOf(keyPress) === -1 && guessesAllowed != 0) {
